@@ -110,7 +110,7 @@
    Etapas correcta ejecutadas
    
     ![APLICACION](assets/Sonar-2.png)
-    ![APLICACION](assets/Sonar-3.png)
+    
    Se observan la estadisticas en la que se puede detallar algunas importantes como:
    🐞 1. Bugs
 
