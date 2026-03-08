@@ -89,17 +89,21 @@
 
 6. **Corriendo configuracion Snyk**
    - 
-    ![APLICACION](assets/Snik-1)
-   ![APLICACION](assets/Snik-2)
-   ![APLICACION](assets/Snik-3)
-   ![APLICACION](assets/Snik-4)
-   ![APLICACION](assets/Snik-5)
+    ![APLICACION](assets/Snik-1.png)
+   
+   ![APLICACION](assets/Snik-2.png)
+   
+   ![APLICACION](assets/Snik-3.png)
+   
+   ![APLICACION](assets/Snik-4.png)
+   
+   ![APLICACION](assets/Snik-5.png)
 
-7. **Corriendo configuracion Sonar**
-    ![APLICACION](assets/Sonar)
-    ![APLICACION](assets/Sonar-1)
-    ![APLICACION](assets/Sonar-2)
-    ![APLICACION](assets/Sonar-3)   
+8. **Corriendo configuracion Sonar**
+    ![APLICACION](assets/Sonar.png)
+    ![APLICACION](assets/Sonar-1.png)
+    ![APLICACION](assets/Sonar-2.png)
+    ![APLICACION](assets/Sonar-3.png)   
 
 ---
 
