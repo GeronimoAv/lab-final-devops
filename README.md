@@ -88,7 +88,7 @@
     ![APLICACION](assets/image-4.png)
 
 6. **Corriendo configuracion Snyk**
-   - 
+    
     ![APLICACION](assets/Snik-1.png)
    
    ![APLICACION](assets/Snik-2.png)
@@ -100,6 +100,8 @@
    ![APLICACION](assets/Snik-5.png)
 
 8. **Corriendo configuracion Sonar**
+
+   
    Ejecucion correcta
     ![APLICACION](assets/Sonar.png)
    llamado a sonar qube
