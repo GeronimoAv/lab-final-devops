@@ -53,6 +53,20 @@
 - Publicación: `docker push geronimoav/devops-app:latest`
 - Automatización: Webhook GitHub o Poll SCM
 
+### Integración de herramientas de seguridad como
+### Snyk
+  -Snyk se utiliza para validar vulnerabilidades de sguridad en las dependencias
+  -Se debe configurar action en donde se encuentra la integracion
+  -Configurar un secret para poder conectarse con Snik web por medio de token
+### Sonar Qube
+  -Sonar qube  se debe instalar en el sistema donde corra el contendor
+  -Se utiliza en CD para analizar automáticamente la calidad y seguridad
+  -Configurar un secret para poder conectarse a interfaz  web por medio de token
+  - Muestra estadistica en interfaz grafica conel fin de informar los posibles errores
+  
+  
+  
+
 ---
 
 ## Pantallazos Requeridos
@@ -72,6 +86,10 @@
 5. **Aplicación corriendo en local**
    - Navegador en `http://localhost:5000` mostrando respuesta JSON
     ![APLICACION](assets/image-4.png)
+
+6. **Corriendo configuracion Snyk**
+   - 
+    ![APLICACION](assets/Snik 1)
 
 ---
 
@@ -209,3 +227,38 @@ Respuesta esperada:
 docker stop devops-app
 docker rm devops-app
 ```
+### 6. Indicaciones de comandos Snik
+  name: Instalar Snyk CLI
+  run: npm install -g snyk
+  source venv/bin/activate
+  snyk monitor --file=requirements.txt --org=ing.luisgonzalez1994
+  
+### 7. Indicaciones de Sonar qube
+1.Obtener la ruta de SonarScanner
+def scannerHome = tool 'SonarScanner'
+/var/jenkins_home/tools/.../sonar-scanner
+
+2. Usar las credenciales/configuración de SonarQube
+withSonarQubeEnv('SonarQube') {
+
+3. Ejecutar comandos en la terminal del agente
+sh """
+
+sh significa shell command.
+
+Jenkins ejecuta los comandos dentro de un agente Linux o contenedor
+
+4. Ejecutar SonarScanner
+${scannerHome}/bin/sonar-scanner
+
+Esto ejecuta el programa SonarScanner desde la ruta que Jenkins encontró.
+
+5. Parámetros del análisis
+-Dsonar.projectKey=python-main
+
+Define el ID del proyecto en SonarQube.
+
+-Dsonar.sources=.
+
+Indica que el código a analizar está en el directorio actual (.).
+
