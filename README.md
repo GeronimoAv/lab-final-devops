@@ -56,12 +56,17 @@
 ### Integración de herramientas de seguridad como
 ### Snyk
   -Snyk se utiliza para validar vulnerabilidades de sguridad en las dependencias
+  
   -Se debe configurar action en donde se encuentra la integracion
+  
   -Configurar un secret para poder conectarse con Snik web por medio de token
 ### Sonar Qube
   -Sonar qube  se debe instalar en el sistema donde corra el contendor
+  
   -Se utiliza en CD para analizar automáticamente la calidad y seguridad
+  
   -Configurar un secret para poder conectarse a interfaz  web por medio de token
+  
   - Muestra estadistica en interfaz grafica conel fin de informar los posibles errores
   
   
