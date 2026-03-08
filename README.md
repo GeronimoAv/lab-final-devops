@@ -111,25 +111,26 @@
    
     ![APLICACION](assets/Sonar-2.png)
     
-   Se observan la estadisticas en la que se puede detallar algunas importantes como:
-   🐞 1. Bugs
+Se observan la estadisticas en la que se puede detallar algunas importantes como:
+   
 
-   Errores en el código que pueden causar fallos o comportamientos incorrectos en el programa.
-  🔒 2. Vulnerabilities
-
-  Problemas de seguridad que podrían permitir ataques.
-
- ⚠️ 3. Code Smells
-
- Problemas de mala práctica o diseño que no rompen el programa pero lo hacen difícil de mantener.
-
- 📊 4. Coverage (Cobertura de pruebas)
+📊 1. Coverage (Cobertura de pruebas)
 
  Mide qué porcentaje del código está cubierto por tests automáticos.
-
- 📉 5. Duplications
+ 
+ 📉 2. Duplications
 
 Porcentaje de código duplicado en el proyecto.
+
+⭐ 3. Maintainability Rating
+
+   Calificación de mantenibilidad del código.
+    
+🔐 4. Security Rating
+
+Calificación de seguridad basada en vulnerabilidades encontradas.
+
+Calificación de mantenibilidad del código.
   ![APLICACION](assets/Sonar-3.png)
   
 
