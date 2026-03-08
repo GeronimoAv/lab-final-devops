@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  # setup: runs steps 1-4 (install venv, create venv, install deps, run tests)
+  setup:
+    image: python:3.12-slim
+    container_name: setup_env
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: /bin/bash -lc "apt-get update && apt-get install -y --no-install-recommends python3-venv gcc && python3 -m venv venv && . venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt && pytest"
+    restart: 'no'
+
+  # app: builds the Dockerfile in this repo and exposes port 5000
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: flask-app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - setup
+
+  # Jenkins with optional access to host Docker socket.
+  # Set the environment variable DOCKER_SOCK_GID on the host and pass it
+  # when running compose if you want to add the socket group to Jenkins.
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/local/bin/docker
+    # Optional: add group id that owns /var/run/docker.sock on the host
+    # Example: export DOCKER_SOCK_GID=$(stat -c '%g' /var/run/docker.sock)
+    group_add:
+      - "${DOCKER_SOCK_GID:-1001}"
+    restart: unless-stopped
+
+  # SonarQube for local static analysis
+  sonarqube:
+    image: sonarqube:lts
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_logs:/opt/sonarqube/logs
+      - sonarqube_extensions:/opt/sonarqube/extensions
+    restart: unless-stopped
+
+volumes:
+  jenkins_home:
+  sonarqube_data:
+  sonarqube_logs:
+  sonarqube_extensions:
