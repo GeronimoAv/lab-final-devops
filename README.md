@@ -110,6 +110,7 @@
    Etapas correcta ejecutadas
    
     ![APLICACION](assets/Sonar-2.png)
+    ![APLICACION](assets/Sonar-3.png)
    Se observan la estadisticas en la que se puede detallar algunas importantes como:
    🐞 1. Bugs
 
@@ -129,8 +130,8 @@
  📉 5. Duplications
 
 Porcentaje de código duplicado en el proyecto.
-
-    ![APLICACION](assets/Sonar-3.png)   
+  ![APLICACION](assets/Sonar-3.png)
+  
 
 
 ---
