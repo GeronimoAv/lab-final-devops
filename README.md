@@ -100,10 +100,36 @@
    ![APLICACION](assets/Snik-5.png)
 
 8. **Corriendo configuracion Sonar**
+   Ejecucion correcta
     ![APLICACION](assets/Sonar.png)
+   llamado a sonar qube
     ![APLICACION](assets/Sonar-1.png)
+
+   Etapas correcta ejecutadas
+   
     ![APLICACION](assets/Sonar-2.png)
+   Se observan la estadisticas en la que se puede detallar algunas importantes como:
+   🐞 1. Bugs
+
+   Errores en el código que pueden causar fallos o comportamientos incorrectos en el programa.
+  🔒 2. Vulnerabilities
+
+  Problemas de seguridad que podrían permitir ataques.
+
+ ⚠️ 3. Code Smells
+
+ Problemas de mala práctica o diseño que no rompen el programa pero lo hacen difícil de mantener.
+
+ 📊 4. Coverage (Cobertura de pruebas)
+
+ Mide qué porcentaje del código está cubierto por tests automáticos.
+
+ 📉 5. Duplications
+
+Porcentaje de código duplicado en el proyecto.
+
     ![APLICACION](assets/Sonar-3.png)   
+
 
 ---
 
