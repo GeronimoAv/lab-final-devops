@@ -55,19 +55,19 @@
 
 ### Integración de herramientas de seguridad como
 ### Snyk
-  -Snyk se utiliza para validar vulnerabilidades de sguridad en las dependencias
+  -Snyk se utiliza para validar vulnerabilidades de seguridad en las dependencias
   
-  -Se debe configurar action en donde se encuentra la integracion
+  -Se debe configurar en action  de git hub donde se encuentra la integracion y dependencias
   
-  -Configurar un secret para poder conectarse con Snik web por medio de token
+  -Se necesita configurar un secret para poder conectarse con Snik web por medio de token
 ### Sonar Qube
-  -Sonar qube  se debe instalar en el sistema donde corra el contendor
+  -Sonar qube  se debe instalar en el sistema donde corra el contendor en este caso Jenkins
   
-  -Se utiliza en CD para analizar automáticamente la calidad y seguridad
+  -Se utiliza en CD para analizar automáticamente la calidad y seguridad del sofware 
   
-  -Configurar un secret para poder conectarse a interfaz  web por medio de token
+  -Se necesita configurar un secret para poder conectarse a interfaz  web por medio de token
   
-  - Muestra estadistica en interfaz grafica conel fin de informar los posibles errores
+  - Muestra estadistica en interfaz grafica con el fin de informar los posibles errores de calidad de sofware
   
   
   
