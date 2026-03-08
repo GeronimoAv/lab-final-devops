@@ -89,13 +89,13 @@
 
 6. **Corriendo configuracion Snyk**
     
-    ![APLICACION](assets/Snik-1.png)
+    ![APLICACION](assets/Snyk-1.png)
    
-   ![APLICACION](assets/Snik-2.png)
+   ![APLICACION](assets/Snyk-2.png)
    
-   ![APLICACION](assets/Snik-3.png)
+   ![APLICACION](assets/Snyk-3.png)
    
-   ![APLICACION](assets/Snik-4.png)
+   ![APLICACION](assets/Snyk-4.png)
    
    ![APLICACION](assets/Snik-5.png)
 
