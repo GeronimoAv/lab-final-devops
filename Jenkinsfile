@@ -20,6 +20,25 @@ pipeline {
         git branch: 'main', url: env.C_REPO_URL
       }
     }
+   // Stage : implementacion de scaner de sonar qube
+   stage('SonarQube Analysis') {
+            steps {
+                script {
+            def scannerHome = tool 'SonarScanner'
+            withSonarQubeEnv('SonarQube') {
+                sh """
+                ${scannerHome}/bin/sonar-scanner \
+                -Dsonar.projectKey=python-main \
+                -Dsonar.sources=. \
+                -Dsonar.host.url=http://sonarqube:9000
+
+               """
+                 }
+
+                }
+
+            }
+        }
 
     // Stage 2: Construir la imagen Docker
     stage('Construir imagen Docker') {
