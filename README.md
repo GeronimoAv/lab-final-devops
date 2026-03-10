@@ -14,7 +14,7 @@
 └── .github/
     └── workflows/
         └── ci.yml                # Pipeline CI (GitHub Actions)
-├── prometheus.yml                # Código de configuración de Prometheus
+├── prometheus.yml                # Código de configuración de Prometheus actualizado
 ```
 
 ---
