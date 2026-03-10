@@ -14,6 +14,8 @@
 └── .github/
     └── workflows/
         └── ci.yml                # Pipeline CI (GitHub Actions)
+├── prometheus.yml                # Código de configuración de Prometheus
+├── requirements.txt               # Dependencias utilizadas para Observabilidad y Monitoreo
 ```
 
 ---
